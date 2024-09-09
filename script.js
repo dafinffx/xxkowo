@@ -12,3 +12,11 @@ document.addEventListener('keydown', function(event) {
         return false;
     }
 });
+
+// mencegah shourcut control + s
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        alert('Cie mau copas.');
+    }
+});
